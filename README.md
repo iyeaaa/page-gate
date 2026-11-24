@@ -14,11 +14,13 @@
 ## 설치
 
 ```sh
-npm i github:iyeaaa/page-gate#v1.0.0
+npm i https://github.com/iyeaaa/page-gate/archive/refs/tags/v1.0.0.tar.gz
 npx page-gate secret          # → PAGE_GATE_SECRET (사이트마다 따로)
 npx page-gate hash            # 입력을 숨긴 채 두 번 묻는다 → PAGE_GATE_PASSWORD_HASH
 npx page-gate check-env       # 환경에 제대로 들어갔나(값은 안 찍는다)
 ```
+
+태그 압축파일 주소로 설치한다: `github:` 단축형은 lockfile 에 `git+ssh://` 로 남아 SSH 키 없는 빌드 서버(Vercel 등)에서 실패할 수 있다(docs 실측). https 주소는 git 없이 받고 integrity 해시가 남는다.
 
 해시 구분자는 `:` 다. `.env`·compose·셸이 `$` 를 펼쳐 해시가 깨지는 일이 없다.
 
