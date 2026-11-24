@@ -1,0 +1,128 @@
+{
+  "probe": "03-throttle",
+  "ranAt": "2026-11-24T16:13:10.670Z",
+  "node": "v26.13.1",
+  "failed": 0,
+  "checks": [
+    {
+      "label": "memory: 한도만큼은 허용",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "memory: 한도 다음 → 막힘(남은 시간 0<ms≤창)",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "memory: 다른 key 는 그대로",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "memory: 창이 지나면 풀린다(영구 잠금 아님)",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "memory: reset → 바로 허용",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "memory: 동시에 50번 → 허용은 정확히 한도(5)번",
+      "ok": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "label": "memory: 동시 50번 중 허용",
+      "ok": true,
+      "actual": 5,
+      "note": "observe"
+    },
+    {
+      "label": "postgres: ensureTable 은 DDL 과 같고 두 번 불러도 된다",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "postgres: 한도만큼은 허용",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "postgres: 한도 다음 → 막힘(남은 시간 0<ms≤창)",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "postgres: 다른 key 는 그대로",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "postgres: 창이 지나면 풀린다(영구 잠금 아님)",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "postgres: reset → 바로 허용",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "postgres: 동시에 50번 → 허용은 정확히 한도(5)번",
+      "ok": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "label": "postgres: 동시 50번 중 허용",
+      "ok": true,
+      "actual": 5,
+      "note": "observe"
+    },
+    {
+      "label": "postgres: 인스턴스 둘이 동시에 20번 → 합쳐서 정확히 한도(6)번",
+      "ok": true,
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "label": "postgres: 공격이 계속돼도 key 마다 줄 하나(30번 시도 → 1줄)",
+      "ok": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "label": "postgres: 창이 지난 줄은 새 창으로(1부터 다시)",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "postgres: 남은 시간 = 창 - DB 기준 경과(약 60초)",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "이상한 표 이름 → 거절(SQL 에 들어가는 이름)",
+      "ok": true,
+      "actual": "THROWN",
+      "expected": "THROWN"
+    }
+  ]
+}

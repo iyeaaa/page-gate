@@ -1,0 +1,120 @@
+{
+  "probe": "05-build",
+  "ranAt": "2026-11-24T16:13:14.558Z",
+  "node": "v26.13.1",
+  "failed": 0,
+  "checks": [
+    {
+      "label": "dist 파일이 다 있다",
+      "ok": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "label": "react.js 맨 앞이 'use client'",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "상대 import 에 .ts 가 남지 않는다",
+      "ok": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "label": "cli.js 맨 앞이 #! 이고 실행 권한",
+      "ok": true,
+      "actual": [
+        true,
+        "755"
+      ],
+      "expected": [
+        true,
+        "755"
+      ]
+    },
+    {
+      "label": "import '@iyeaaa/page-gate'",
+      "ok": true,
+      "actual": "DEFAULT_SCRYPT,DEFAULT_THROTTLE,MAX_PASSWORD_LENGTH,MIN_SECRET_LENGTH,createGate,gateFromEnv,hashPassword,memoryStore,parseHash,passwordFingerprint,safeNext,signToken,verifyPassword,verifyToken",
+      "expected": "(v        ) => [\"createGate\", \"gateFromEnv\", \"hashPassword\", \"memoryStore\", \"safeNext\", \"verifyToken\"].every((k) => v.split(\",\").includes(k))"
+    },
+    {
+      "label": "import '@iyeaaa/page-gate/stores/postgres'",
+      "ok": true,
+      "actual": "postgresStore,postgresStoreDDL",
+      "expected": "postgresStore,postgresStoreDDL"
+    },
+    {
+      "label": "dist/next.js 의 next import 가 맨 이름",
+      "ok": true,
+      "actual": [
+        "next/headers",
+        "next/navigation",
+        "next/server"
+      ],
+      "expected": [
+        "next/headers",
+        "next/navigation",
+        "next/server"
+      ]
+    },
+    {
+      "label": "next.d.ts 가 내보내는 이름",
+      "ok": true,
+      "actual": [
+        "DEFAULT_MESSAGES",
+        "gateProxy",
+        "isRequestUnlocked",
+        "lockAndRedirect",
+        "unlockFromForm"
+      ],
+      "expected": [
+        "DEFAULT_MESSAGES",
+        "gateProxy",
+        "isRequestUnlocked",
+        "lockAndRedirect",
+        "unlockFromForm"
+      ]
+    },
+    {
+      "label": "없는 하위 경로는 막힌다(dist 내부 노출 안 함)",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "page-gate secret → 43자 base64url",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "page-gate hash(파이프 입력) → scrypt 2^17/8/1 해시",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "check-env 맞으면 0 + 값은 찍지 않는다",
+      "ok": true,
+      "actual": [
+        0,
+        false,
+        false
+      ],
+      "expected": [
+        0,
+        false,
+        false
+      ]
+    },
+    {
+      "label": "check-env 깨진 해시 → 1",
+      "ok": true,
+      "actual": 1,
+      "expected": 1
+    }
+  ]
+}

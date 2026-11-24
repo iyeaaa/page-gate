@@ -1,0 +1,146 @@
+{
+  "probe": "01-token",
+  "ranAt": "2026-11-24T16:13:07.759Z",
+  "node": "v26.13.1",
+  "failed": 0,
+  "checks": [
+    {
+      "label": "정상",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "만료 직전(1초 남음)",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "만료 시각 정각",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "만료 지남",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "다른 서명 키",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "비밀번호 바뀜(지문 다름)",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "만료 늘려 위조",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "서명 한 글자 변조",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "서명 길이 다름(예외 없이 false)",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "서명 비움",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "버전 다름",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "만료 소수점(조각 수 틀림)",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "만료 숫자 아님",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "만료 지수 표기",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "조각 수 부족",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "undefined",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "빈 문자열",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "아주 긴 값",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "한글·멀티바이트 서명",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "label": "지문이 포트폴리오 원본과 같다",
+      "ok": true,
+      "actual": "l9IYIZvOGkd6",
+      "expected": "l9IYIZvOGkd6"
+    },
+    {
+      "label": "같은 입력 → 포트폴리오 원본과 같은 쿠키",
+      "ok": true,
+      "actual": "v1.1800000060.l9IYIZvOGkd6.Qs8Khqz_LB0MuE_lEj-YdShys72ofQOAEYnjAFxv6Zk",
+      "expected": "v1.1800000060.l9IYIZvOGkd6.Qs8Khqz_LB0MuE_lEj-YdShys72ofQOAEYnjAFxv6Zk"
+    },
+    {
+      "label": "포트폴리오가 만든 쿠키를 받아 준다",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "label": "우리 쿠키를 포트폴리오가 받아 준다",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    }
+  ]
+}
